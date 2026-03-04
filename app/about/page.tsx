@@ -20,7 +20,7 @@ export default function About() {
             <h2 className="text-xl font-semibold text-text-primary mb-2">What is StreamScout?</h2>
             <p>
               StreamScout is a free tool that helps small streamers find games with
-              good discoverability potential on Twitch. We analyze 500+ games every
+              good discoverability potential on Twitch. We analyze every game on Twitch every
               10 minutes and rank them by opportunity score - helping you find games
               where you can actually get noticed.
             </p>

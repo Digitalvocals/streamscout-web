@@ -327,7 +327,7 @@ Find your game → streamscout.gg`;
               </p>
               <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
                 <strong className="text-matrix-green">StreamScout</strong> is the modern replacement — 
-                analyzing <strong>{data?.total_games_analyzed || 500}+ games</strong> in real-time 
+                analyzing <strong>{data?.total_games_analyzed ? `${data.total_games_analyzed.toLocaleString()}+` : 'thousands of'} games</strong> in real-time 
                 to find where small streamers can actually get discovered.
               </p>
             </div>
@@ -372,7 +372,7 @@ Find your game → streamscout.gg`;
                     </tr>
                     <tr>
                       <td className="p-3 text-gray-200">Games Analyzed</td>
-                      <td className="p-3 text-center text-green-400">{data?.total_games_analyzed || 500}+</td>
+                      <td className="p-3 text-center text-green-400">{data?.total_games_analyzed ? `${data.total_games_analyzed.toLocaleString()}+` : 'Thousands'}</td>
                       <td className="p-3 text-center text-gray-400">Unknown</td>
                     </tr>
                     <tr>
@@ -737,10 +737,10 @@ Find your game → streamscout.gg`;
                 href="/"
                 className="inline-block bg-matrix-green text-matrix-dark font-bold text-lg px-8 py-3 rounded-full transition-all duration-200 hover:bg-matrix-green-bright hover:shadow-lg hover:shadow-matrix-green/50"
               >
-                Search All {data?.total_games_analyzed || 500} Games →
+                Search All {data?.total_games_analyzed?.toLocaleString() || ''} Games →
               </Link>
               <p className="text-gray-500 text-sm mt-3">
-                Full search, genre filters, and 500+ games analyzed
+                Full search, genre filters, and every game on Twitch analyzed
               </p>
             </div>
           </main>

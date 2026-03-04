@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'TwitchStrike Alternative: Best Games to Stream in 2025 - StreamScout',
-  description: 'Looking for a TwitchStrike alternative that actually works? StreamScout analyzes 500+ games in real-time to find where small streamers can actually get discovered. Free, no signup required.',
+  title: 'TwitchStrike Alternative: Best Games to Stream in 2026 - StreamScout',
+  description: 'Looking for a TwitchStrike alternative that actually works? StreamScout analyzes every game on Twitch in real-time to find where small streamers can actually get discovered. Free, no signup required.',
   keywords: [
     'TwitchStrike alternative',
     'TwitchStrike replacement',
@@ -12,11 +12,11 @@ export const metadata: Metadata = {
     'low competition Twitch games',
     'streaming game recommendations',
     'Twitch discoverability',
-    'games for small streamers 2025'
+    'games for small streamers 2026'
   ],
   openGraph: {
-    title: 'TwitchStrike Alternative: Best Games to Stream in 2025',
-    description: 'Real-time game discovery for small streamers. 500+ games analyzed every 10 minutes. Find where you can actually get discovered.',
+    title: 'TwitchStrike Alternative: Best Games to Stream in 2026',
+    description: 'Real-time game discovery for small streamers. Every game on Twitch analyzed every 10 minutes. Find where you can actually get discovered.',
     type: 'website',
     url: 'https://streamscout.gg/twitchstrike-alternative',
     siteName: 'StreamScout',
