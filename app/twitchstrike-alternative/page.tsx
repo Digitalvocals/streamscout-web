@@ -756,6 +756,8 @@ Find your game → streamscout.gg`;
           <div className="mt-4 flex justify-center gap-4 flex-wrap">
             <Link href="/about" className="hover:text-matrix-green transition-colors">About</Link>
             <span>•</span>
+            <Link href="/soundcheck" className="hover:text-matrix-green transition-colors">Soundcheck</Link>
+            <span>•</span>
             <Link href="/changelog" className="hover:text-matrix-green transition-colors">Changelog</Link>
             <span>•</span>
             <Link href="/contact" className="hover:text-matrix-green transition-colors">Contact</Link>

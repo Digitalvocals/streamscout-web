@@ -1,26 +1,39 @@
 import React from 'react';
+import Link from 'next/link';
 
 export function BannerHeader() {
   return (
     <div className="relative w-full max-w-[1400px] mx-auto rounded-xl overflow-hidden shadow-2xl mb-8">
       {/* Background Image */}
-      <img 
-        src="/images/banner-bg.png" 
-        alt="StreamScout" 
+      <img
+        src="/images/banner-bg.png"
+        alt="StreamScout"
         className="w-full h-auto block"
       />
-      
+
       {/* Dark Gradient Overlay */}
-      <div 
+      <div
         className="absolute inset-0"
         style={{
           background: 'linear-gradient(135deg, rgba(10,14,26,0.65) 0%, rgba(10,14,26,0.35) 50%, rgba(10,14,26,0.55) 100%)'
         }}
       />
-      
+
+      {/* Nav Links */}
+      <div className="absolute top-4 right-4 md:top-6 md:right-8 flex gap-4 text-sm z-10">
+        <Link href="/soundcheck" className="text-white/80 hover:text-brand-primary transition-colors font-medium"
+          style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+          Soundcheck
+        </Link>
+        <Link href="/about" className="text-white/80 hover:text-brand-primary transition-colors font-medium"
+          style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+          About
+        </Link>
+      </div>
+
       {/* Text Overlay */}
       <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 lg:px-20">
-        <h1 
+        <h1
           className="text-4xl md:text-6xl lg:text-[80px] font-black tracking-[0.1em] uppercase text-white mb-2 md:mb-4 leading-none"
           style={{
             textShadow: `
@@ -37,8 +50,8 @@ export function BannerHeader() {
         >
           STREAMSCOUT
         </h1>
-        
-        <p 
+
+        <p
           className="text-xs md:text-base lg:text-xl font-semibold tracking-[0.15em] uppercase text-gray-50"
           style={{
             textShadow: `

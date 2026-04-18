@@ -64,6 +64,19 @@ export default function About() {
           </section>
 
           <section className="bg-bg-elevated border border-bg-hover rounded-lg p-6">
+            <h2 className="text-xl font-semibold text-text-primary mb-2">Soundcheck</h2>
+            <p>
+              Our free <a href="/soundcheck" className="text-brand-primary hover:underline">Soundcheck</a> tool
+              runs a 30-second audio diagnostic right inside OBS. It measures your mic level, game balance,
+              noise floor, and more -- then gives you a score and specific fixes before you go live.
+            </p>
+            <p className="mt-2">
+              No audio data leaves your machine. The OBS plugin measures locally and only sends
+              numbers to generate your report.
+            </p>
+          </section>
+
+          <section className="bg-bg-elevated border border-bg-hover rounded-lg p-6">
             <h2 className="text-xl font-semibold text-text-primary mb-2">About the Creator</h2>
             <p>
               StreamScout was created by a fellow streamer who wanted to make
