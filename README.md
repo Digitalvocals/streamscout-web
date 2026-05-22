@@ -85,7 +85,7 @@ Data refreshes every 10 minutes. Scores update automatically. No manual curation
 npm install
 
 # Set environment variable
-export NEXT_PUBLIC_API_URL=https://web-production-90f4a9.up.railway.app
+export NEXT_PUBLIC_API_URL=https://streamscout-api.sparkslab.ai
 
 # Run dev server
 npm run dev

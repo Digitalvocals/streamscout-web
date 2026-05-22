@@ -14,7 +14,7 @@ const GENRE_KEY = 'strategy'
 const GENRE_DISPLAY = GENRE_INSIGHTS[GENRE_KEY].display
 // ============================================================================
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://web-production-90f4a9.up.railway.app'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://streamscout-api.sparkslab.ai'
 
 interface GameOpportunity {
   rank: number

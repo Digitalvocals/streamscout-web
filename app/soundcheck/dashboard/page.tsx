@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { BannerHeader } from '../../components/BannerHeader'
 import axios from 'axios'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://web-production-90f4a9.up.railway.app'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://streamscout-api.sparkslab.ai'
 
 interface SoundcheckScore {
   id: number

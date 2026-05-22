@@ -6,7 +6,7 @@ import { BannerHeader } from '@/app/components/BannerHeader'
 
 export const revalidate = 600 // ISR: Regenerate every 10 minutes
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://web-production-90f4a9.up.railway.app'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://streamscout-api.sparkslab.ai'
 
 async function getInitialGames() {
   try {
