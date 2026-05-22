@@ -139,9 +139,9 @@ export default function RootLayout({
                   "price": "0",
                   "priceCurrency": "USD"
                 },
-                "description": "Find Twitch games where you can actually get discovered. Scores 2,000+ games across discoverability, viability, and engagement -- updated every 10 minutes.",
+                "description": "Find Twitch games where you can actually get discovered. Scores every game on Twitch across discoverability, viability, and engagement -- updated every 10 minutes.",
                 "featureList": [
-                  "Real-time opportunity scoring for 2,000+ Twitch games",
+                  "Real-time opportunity scoring for every game on Twitch",
                   "Genre filtering across 13 categories",
                   "Trend detection with momentum badges",
                   "Historical analytics with sparkline trends",

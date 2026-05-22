@@ -178,7 +178,7 @@ export default function GameList({ initialGames, hasError }: GameListProps) {
     
     setIsLoadingAll(true)
     try {
-      const res = await fetch(`${API_URL}/api/v1/analyze?limit=2000`)
+      const res = await fetch(`${API_URL}/api/v1/analyze?limit=5000`)
       if (!res.ok) throw new Error('Failed to load')
       
       const data = await res.json()
@@ -288,7 +288,7 @@ export default function GameList({ initialGames, hasError }: GameListProps) {
     ? filteredGames.filter(game => isFavorited(game.game_id))
     : filteredGames
   
-  // Untracked favorites (favorited games not in top 2000)
+  // Untracked favorites (favorited games not currently streaming)
   const untrackedFavorites = favorites.filter(fav => 
     !allGames.some(game => game.game_id === fav.game_id)
   )
@@ -492,7 +492,7 @@ export default function GameList({ initialGames, hasError }: GameListProps) {
         </div>
       ) : null}
 
-      {/* Untracked Favorites (favorited games not in top 2000) */}
+      {/* Untracked Favorites (favorited games not currently streaming) */}
       {showFavoritesOnly && untrackedFavorites.length > 0 && (
         <div className="space-y-4 mb-6">
           {untrackedFavorites.map(fav => (

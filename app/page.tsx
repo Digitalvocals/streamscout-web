@@ -42,7 +42,7 @@ export default async function Home() {
         "name": "What is the best game to stream on Twitch right now?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The best game to stream changes every day. StreamScout analyzes 2,000+ Twitch games every 10 minutes and ranks them by a composite score of discoverability (45%), viability (35%), and engagement (20%). Games scoring 7+ out of 10 are strong picks for small streamers looking to grow."
+          "text": "The best game to stream changes every day. StreamScout analyzes every game on Twitch every 10 minutes and ranks them by a composite score of discoverability (45%), viability (35%), and engagement (20%). Games scoring 7+ out of 10 are strong picks for small streamers looking to grow."
         }
       },
       {
@@ -66,7 +66,7 @@ export default async function Home() {
         "name": "Is StreamScout free to use?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, StreamScout is completely free. No signup required, no paywalls, no premium tiers. The full game analyzer with all 2,000+ games, genre filtering, trend detection, and historical analytics is available to everyone at streamscout.gg."
+          "text": "Yes, StreamScout is completely free. No signup required, no paywalls, no premium tiers. The full game analyzer with every game on Twitch, genre filtering, trend detection, and historical analytics is available to everyone at streamscout.gg."
         }
       },
       {

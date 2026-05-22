@@ -402,13 +402,13 @@ export function EmptyFavoritesState() {
   )
 }
 
-/** Card for favorited games not in current top 2000 */
+/** Card for favorited games not currently streaming */
 export function UntrackedFavoriteCard({ gameName, onRemove }: { gameName: string, onRemove: () => void }) {
   return (
     <div className="p-4 bg-bg-elevated border border-border rounded-lg flex items-center justify-between">
       <div>
         <h3 className="text-text-primary font-semibold">{gameName}</h3>
-        <p className="text-text-tertiary text-sm">Not currently in top 2000 games</p>
+        <p className="text-text-tertiary text-sm">Not currently streaming on Twitch</p>
       </div>
       <button
         onClick={onRemove}
@@ -777,7 +777,7 @@ Favorites:
   - FavoritesFilter       (All Games / My Favorites toggle)
   - ClearFavoritesButton  (red danger button)
   - EmptyFavoritesState   (empty state message)
-  - UntrackedFavoriteCard (for games not in top 2000)
+  - UntrackedFavoriteCard (for games not currently streaming)
 
 Badges:
   - MomentumBadge    (Rising/Falling/Stable/Hidden Gem)
