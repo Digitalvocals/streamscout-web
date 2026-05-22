@@ -15,7 +15,7 @@ const nextConfig = {
           { key: 'X-XSS-Protection', value: '0' },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' data:; connect-src 'self' https://api.streamscout.gg https://*.railway.app https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com"
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self' data:; connect-src 'self' https://api.streamscout.gg https://*.sparkslab.ai https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com"
           },
         ],
       },
