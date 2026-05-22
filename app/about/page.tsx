@@ -1,11 +1,64 @@
 'use client'
 
 import Link from 'next/link'
+import Script from 'next/script'
 import { BannerHeader } from '../components/BannerHeader'
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is StreamScout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "StreamScout is a free tool that helps small streamers find games with good discoverability potential on Twitch. It analyzes every game on Twitch every 10 minutes and ranks them by opportunity score, helping streamers find games where they can actually get noticed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why was StreamScout built?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most small streamers hear the advice 'don't stream oversaturated games' but have no data to identify which games they should stream instead. StreamScout replaces guesswork with real-time analytics, making discoverability data accessible to everyone for free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does StreamScout's algorithm work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The algorithm scores games across three factors: Discoverability (can viewers find you in this category), Viability (is there enough viewership to be worth streaming), and Engagement (are viewers actively watching). These combine into an overall opportunity score updated every 10 minutes with live Twitch data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Soundcheck?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Soundcheck is a free OBS plugin that runs a 30-second audio diagnostic before you go live. It measures mic level, game balance, noise floor, true peak, dynamic range, and hum detection -- then gives a score out of 100 with specific fixes ranked by impact. All audio processing happens locally inside OBS; no recordings are uploaded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does StreamScout cost anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. StreamScout is free forever with no paywalls, no premium tiers, and no signup required. Just visit streamscout.gg and use it."
+      }
+    }
+  ]
+}
 
 export default function About() {
   return (
     <main className="min-h-screen bg-bg-primary p-4 md:p-8">
+      <Script
+        id="ld-faq-about"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <BannerHeader />
 
       <div className="max-w-3xl mx-auto">

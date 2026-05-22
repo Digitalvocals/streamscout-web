@@ -1,5 +1,5 @@
-// US-073: Home Page with ISR + Banner Header
 import { Suspense } from 'react'
+import Script from 'next/script'
 import GameList from '@/components/GameList'
 import { GameListSkeleton } from '@/components/Skeletons'
 import { BannerHeader } from '@/app/components/BannerHeader'
@@ -33,8 +33,60 @@ async function getInitialGames() {
 export default async function Home() {
   const { games, hasError } = await getInitialGames()
   
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best game to stream on Twitch right now?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best game to stream changes every day. StreamScout analyzes 2,000+ Twitch games every 10 minutes and ranks them by a composite score of discoverability (45%), viability (35%), and engagement (20%). Games scoring 7+ out of 10 are strong picks for small streamers looking to grow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does StreamScout's scoring algorithm work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "StreamScout scores every game across three dimensions: Discoverability (45% weight) measures whether new streamers can get found -- games with 5-150 active channels score highest. Viability (35%) checks if there is a real audience watching, requiring 800-30,000 concurrent viewers. Engagement (20%) measures how actively the audience is watching. These combine into an overall opportunity score updated every 10 minutes with live Twitch data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are Hidden Gem games on Twitch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hidden Gems are games where viewership is growing but the number of streamers has stayed flat. This means there is increasing audience demand with limited competition -- the ideal window for a small streamer to establish themselves before the category gets crowded. StreamScout automatically detects and badges these momentum signals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is StreamScout free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, StreamScout is completely free. No signup required, no paywalls, no premium tiers. The full game analyzer with all 2,000+ games, genre filtering, trend detection, and historical analytics is available to everyone at streamscout.gg."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often does StreamScout update its data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "StreamScout refreshes its data every 10 minutes by pulling live stream counts directly from the Twitch API. Historical trends are tracked over a 14-day rolling window to detect momentum shifts like rising games, hidden gems, and crowding categories."
+        }
+      }
+    ]
+  }
+
   return (
     <main className="min-h-screen bg-bg-primary p-4 md:p-8">
+      <Script
+        id="ld-faq-home"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Banner Header */}
       <BannerHeader />
       

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { GenreBannerHeader } from '../components/GenreBannerHeader'
 import { GameCard } from '@/components/GameCard'
 import GENRE_INSIGHTS from '../components/genre-insights'
+import { GenreJsonLd } from '../components/GenreJsonLd'
 
 // ============================================================================
 // CHANGE THESE TWO LINES FOR EACH GENRE PAGE
@@ -163,6 +164,7 @@ export default function BestGenreGamesToStream() {
 
   return (
     <main className="min-h-screen bg-bg-primary p-4 md:p-8">
+      <GenreJsonLd genreKey={GENRE_KEY} genreDisplay={GENRE_DISPLAY} />
       {/* Banner Header */}
       <GenreBannerHeader genre={GENRE_DISPLAY} />
 

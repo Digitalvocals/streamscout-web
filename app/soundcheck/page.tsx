@@ -1,11 +1,79 @@
 'use client'
 
 import Link from 'next/link'
+import Script from 'next/script'
 import { BannerHeader } from '../components/BannerHeader'
+
+const soundcheckSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "StreamScout Soundcheck",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Windows",
+      "description": "A free OBS plugin that runs a 30-second audio diagnostic before you go live. Measures mic level, game balance, noise floor, true peak, dynamic range, and hum detection. Gives a score out of 100 with specific fixes ranked by impact.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "30-second audio diagnostic inside OBS",
+        "Score out of 100 for stream readiness",
+        "Specific fixes ranked by impact",
+        "Improvement tracking over time",
+        "Local processing -- no audio uploaded"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Soundcheck measure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Soundcheck measures six audio metrics: Mic Level (LUFS loudness), Game Balance (voice-to-game ratio), Noise Floor (background hiss), True Peak (clipping detection), Dynamic Range (volume consistency), and Hum Detection (50/60 Hz electrical buzz)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Soundcheck record or upload my audio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All audio processing happens locally inside OBS. No recordings, no uploads, no files on disk. Only numerical measurements like '-17.2 LUFS' are sent to generate your report. StreamScout never hears your voice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a Soundcheck test take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A full Soundcheck test takes 30 seconds: 15 seconds of talking (greet your chat like normal), 10 seconds of silence (to measure room noise), and 5 seconds of game audio (to check your balance)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Soundcheck free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Soundcheck is completely free. The OBS plugin and web dashboard are both available at no cost."
+          }
+        }
+      ]
+    }
+  ]
+}
 
 export default function SoundcheckLanding() {
   return (
     <main className="min-h-screen bg-bg-primary p-4 md:p-8">
+      <Script
+        id="ld-soundcheck"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(soundcheckSchema) }}
+      />
       <BannerHeader />
 
       <div className="max-w-3xl mx-auto">
